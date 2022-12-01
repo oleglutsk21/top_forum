@@ -1,0 +1,41 @@
+{
+  "browserslist": [
+    "> 1%",
+    "ie >= 11"
+  ],
+  "postcss": {
+    "maps": false,
+    "plugins": {
+      "cssnano": {},
+      "postcss-remove-selectors": {
+        "selectors": [
+          ".form-text"
+        ]
+      }
+    }
+  },
+  "cssnano": {
+    "preset": [
+      "advanced",
+      {
+        "autoprefixer": {
+          "add": true
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "cssnano": "^5.1.0",
+    "cssnano-preset-advanced": "^5.2.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-mode": "^1.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.4",
+    "postcss-remove-selectors": "^2.0.1",
+    "sass": "^1.49.9"
+  }
+}
