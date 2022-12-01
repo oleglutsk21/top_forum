@@ -1,2 +1,14 @@
+/* Bootstrap variables */
 /* disable !important rule */
 $enable-important-utilities:  false !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px,
+  xxl: 1170px
+) !default;
+$container-padding-x: 30px !default;
+
+$font-family-base: 'Roboto', sans-serif;
