@@ -1,0 +1,19 @@
+// @import "custom-variables";
+
+.footer {
+    margin-block-start: auto;
+    background-color: $bg-color-black;
+    color: #F8F3E9;
+}
+.footer__copyright {
+    padding: 25px 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid gray;
+}
+.footer__copyright-logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
