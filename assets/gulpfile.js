@@ -1,26 +1,55 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const sourcemaps = require('gulp-sourcemaps');
-const postcss = require('gulp-postcss');
-const del = require('del');
-const mode = require('gulp-mode')();
 
-function cleanup() {
-  return del('./css/*');
+let path = {
+    build: {
+        css: "./css/",
+    },
+    src: {
+        css: "./scss/styles.scss",
+
+    },
+    watch: {
+        css: "./scss/**/*.scss",
+    },
+    clean: "./css"
 }
 
-function buildScss() {
-  return gulp.src('./scss/**/*.scss')
-    .pipe(mode.development(sourcemaps.init()))
-    .pipe(sass({ includePaths: ['node_modules'] }).on('error', sass.logError))
-    .pipe(postcss())
-    .pipe(mode.development(sourcemaps.write()))
-    .pipe(gulp.dest('./css'));
+let {src, dest} = require('gulp'),
+    gulp = require('gulp'),
+    del = require("del"),
+    scss = require('gulp-sass')(require('node-sass')),
+    autoprefixer = require("gulp-autoprefixer"),
+    group_media  = require("gulp-group-css-media-queries");
+    
+
+
+function css(params) {
+    return src(path.src.css)
+        .pipe(scss({ outputStyle: 'expanded' }).on('error', scss.logError))
+        .pipe(
+            group_media()
+        )
+        .pipe(
+            autoprefixer({
+                overrideBrowserslist: ["last 5 versions"],
+                cascade: true
+            })
+        )
+        .pipe(dest(path.build.css))
 }
 
-function watch() {
-  gulp.watch('./scss/**/*.scss', buildScss);
+
+function watchFiles(params) {
+    gulp.watch([path.watch.css], css);
 }
 
-gulp.task('build', gulp.series(cleanup, buildScss));
-gulp.task('default', gulp.series('build', watch));
+function clean(params) {
+    return del(path.clean);
+}
+
+let build = gulp.series(clean, gulp.parallel(css));
+let watch = gulp.parallel(build, watchFiles);
+
+exports.css = css;
+exports.build = build;
+exports.watch = watch;
+exports.default = watch;

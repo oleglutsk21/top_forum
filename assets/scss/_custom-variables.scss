@@ -6,7 +6,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1170px,
+  xl: 1080px,
   xxl: 1170px
 ) !default;
 $container-padding-x: 30px !default;
@@ -14,5 +14,6 @@ $container-padding-x: 30px !default;
 $font-family-base: 'Roboto', sans-serif;
 
 
-
+$text-color-secondary: #C99C47;
 $bg-color-black: rgba(50, 50, 50, 1);
+$border-color: rgba(112, 112, 112, 0.9);
