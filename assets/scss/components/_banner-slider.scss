@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     text-align: center;
@@ -49,10 +49,28 @@
     background-color: $white;
 }
 .banner__slider-info-day {
-    font-size: 26px;
+    font-size: 30px;
 }
 .banner__slider-info-year {
-    font-size: 30px;
+    font-size: 35px;
+}
+.banner__slider-info-title {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $text-color-secondary;
+}
+.banner__slider-info-about {
+    font-size: 13px;
+    line-height: 18px;
+    color: $text-color-black;
+}
+.banner__slider-info-address {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: $text-color-gray;
 }
 .banner__slider-image-item {
     width: 100%;
