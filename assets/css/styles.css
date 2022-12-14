@@ -7176,8 +7176,105 @@ ul {
   list-style: none;
 }
 
+.banner__slider {
+  position: relative;
+}
+
+.banner__slider-info {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 100%;
+}
+
+.banner__slider-info-inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+}
+
+.banner__slider-info-items {
+  padding: 10px 0;
+  max-width: 510px;
+  border: 2px solid #fff;
+}
+
+.banner__slider-info-item {
+  padding: 20px 25px;
+  background-color: rgba(245, 240, 235, 0.9);
+  margin-inline: 10px;
+}
+
+.banner__slider-info-wrapper {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.banner__slider-info-date {
+  padding: 25px 10px;
+  min-width: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #C99C47;
+  border: 1px solid #C99C47;
+  background-color: #fff;
+}
+
+.banner__slider-info-day {
+  font-size: 26px;
+}
+
+.banner__slider-info-year {
+  font-size: 30px;
+}
+
 .banner__slider-image-item {
   width: 100%;
+}
+
+.banner__slider-arrow {
+  padding: 0;
+  background: none;
+  border: 0;
+}
+
+.banner__slider-arrow svg path {
+  fill: #fff;
+}
+
+.banner__slider-arrow:hover svg path {
+  fill: #323232;
 }
 
 .for-future__inner {
@@ -7300,18 +7397,20 @@ ul {
           column-gap: 15px;
 }
 
-.for-future__button-register {
+.for-future__link-register {
   padding: 12px 25px;
   min-width: 155px;
   font-size: 13px;
   line-height: 24px;
   color: #fff;
   text-transform: uppercase;
+  text-decoration: none;
   background-color: #C99C47;
   border: 0;
 }
 
-.for-future__button-register:hover {
+.for-future__link-register:hover {
+  color: #fff;
   background-color: #D4C198;
 }
 

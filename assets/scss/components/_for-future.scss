@@ -70,16 +70,18 @@
     justify-content: center;
     column-gap: 15px;
 }
-.for-future__button-register {
+.for-future__link-register {
     padding: 12px 25px;
     min-width: 155px;
     font-size: 13px;
     line-height: 24px;
     color: $white;
     text-transform: uppercase;
+    text-decoration: none;
     background-color: $bg-color-secondary;
     border: 0;
     &:hover {
+        color: $white;
         background-color: $bg-color-yellow;
     }
 }

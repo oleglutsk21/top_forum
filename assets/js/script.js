@@ -1,6 +1,28 @@
 $(document).ready (function () {
     videoHendler();
 
+    /* BANNER IMAGES slider */
+    $('.banner__slider-image-items').slick({
+        arrows: false,
+        slidesToShow: 1,
+        // autoplay: true,
+        autoplaySpeed: 4000,
+        // appendArrows: $('.customer-reviews__slider-arrows'),
+        // prevArrow: $('.customer-reviews__slider-arrow-left'),
+        // nextArrow: $('.customer-reviews__slider-arrow-right'),
+    });
+
+    /* BANNER TEXT slider */
+    $('.banner__slider-info-items').slick({
+        slidesToShow: 1,
+        // autoplay: true,
+        autoplaySpeed: 4000,
+        // appendArrows: $('.customer-reviews__slider-arrows'),
+        prevArrow: $('.banner__slider-arrow-left'),
+        nextArrow: $('.banner__slider-arrow-right'),
+        asNavFor: ".banner__slider-image-items",
+    });
+
     /* CUSTOMER REVIEWS slider */
     $('.customer-reviews__slider').slick({
         slidesToShow: 2,
