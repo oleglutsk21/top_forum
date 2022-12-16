@@ -7176,6 +7176,70 @@ ul {
   list-style: none;
 }
 
+.header-top {
+  background-color: #323232;
+}
+
+.header-top__inner {
+  padding-block: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__menu-items {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header__menu-item {
+  position: relative;
+  padding: 6px 20px;
+  -webkit-border-end: 1px solid rgba(112, 112, 112, 0.9);
+          border-inline-end: 1px solid rgba(112, 112, 112, 0.9);
+}
+
+.header__menu-item:last-child {
+  -webkit-border-end: 0;
+          border-inline-end: 0;
+}
+
+.header__menu-item-link {
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__menu-item-link:hover {
+  color: #C99C47;
+}
+
+.header__submenu-items {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  display: none;
+}
+
+.header__menu-item:hover .header__submenu-items {
+  display: block;
+}
+
 .banner__slider {
   position: relative;
 }

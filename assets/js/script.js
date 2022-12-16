@@ -6,18 +6,14 @@ $(document).ready (function () {
         arrows: false,
         slidesToShow: 1,
         // autoplay: true,
-        autoplaySpeed: 4000,
-        // appendArrows: $('.customer-reviews__slider-arrows'),
-        // prevArrow: $('.customer-reviews__slider-arrow-left'),
-        // nextArrow: $('.customer-reviews__slider-arrow-right'),
+        // autoplaySpeed: 4000,
     });
 
     /* BANNER TEXT slider */
     $('.banner__slider-info-items').slick({
         slidesToShow: 1,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 4000,
-        // appendArrows: $('.customer-reviews__slider-arrows'),
         prevArrow: $('.banner__slider-arrow-left'),
         nextArrow: $('.banner__slider-arrow-right'),
         asNavFor: ".banner__slider-image-items",
