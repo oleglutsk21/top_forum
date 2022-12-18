@@ -7193,6 +7193,10 @@ ul {
           justify-content: space-between;
 }
 
+.header-top__burger-menu {
+  display: none;
+}
+
 .header__menu-items {
   margin: 0;
   padding: 0;
@@ -7214,6 +7218,11 @@ ul {
           border-inline-end: 1px solid rgba(112, 112, 112, 0.9);
 }
 
+.header__menu-item:first-child {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
 .header__menu-item:last-child {
   -webkit-border-end: 0;
           border-inline-end: 0;
@@ -7229,15 +7238,87 @@ ul {
   color: #C99C47;
 }
 
-.header__submenu-items {
+.header__submenu-wrapper {
   position: absolute;
-  top: 25px;
+  top: 35px;
   left: 0;
+  z-index: 1000;
   display: none;
 }
 
-.header__menu-item:hover .header__submenu-items {
+.header__submenu-items {
+  padding: 0;
+  margin-top: 13px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #fff;
+  border: 1px solid rgba(112, 112, 112, 0.9);
+}
+
+.header__submenu-item-link {
+  padding: 14px 25px;
   display: block;
+  font-size: 15px;
+  color: #323232;
+  text-decoration: none;
+}
+
+.header__submenu-item-link:hover {
+  color: #323232;
+  background-color: #d6d6d6;
+}
+
+.header__menu-item:hover .header__submenu-wrapper {
+  display: block;
+}
+
+.header-top__button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.header-top__button-link {
+  padding: 11px 25px;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #323232;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #e8d8b6;
+}
+
+.header-bottom__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header-bottom__site-logo {
+  padding-block: 10px;
+  -webkit-margin-end: 45px;
+          margin-inline-end: 45px;
+}
+
+.header-bottom__site-logo-link {
+  display: block;
+}
+
+.header-bottom__menu-items {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .banner__slider {
