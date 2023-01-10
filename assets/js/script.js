@@ -5,8 +5,9 @@ $(document).ready (function () {
     $('.banner__slider-image-items').slick({
         arrows: false,
         slidesToShow: 1,
-        // autoplay: true,
-        // autoplaySpeed: 4000,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        asNavFor: ".banner__slider-info-items",
     });
 
     /* BANNER TEXT slider */
