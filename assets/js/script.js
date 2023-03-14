@@ -1,3 +1,4 @@
+
 $(document).ready (function () {
     videoHendler();
 
@@ -46,14 +47,16 @@ $(document).ready (function () {
 function videoHendler() {
     let playButton = document.getElementById("promo-video__play-button");
     let video = document.getElementById("promo-video");
-    playButton.addEventListener("click", function() {
-        video.play();
-        playButton.style.display = 'none';
-    });
-    video.addEventListener("play", function() {
-        playButton.style.display = 'none';
-    });
-    video.addEventListener("pause", function() {
-        playButton.style.display = 'flex';
-    });
+    if (playButton && video) {
+        playButton.addEventListener("click", function() {
+            video.play();
+            playButton.style.display = 'none';
+        });
+        video.addEventListener("play", function() {
+            playButton.style.display = 'none';
+        });
+        video.addEventListener("pause", function() {
+            playButton.style.display = 'flex';
+        });
+    };
 };

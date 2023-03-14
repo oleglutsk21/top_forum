@@ -6,6 +6,67 @@
     align-items: center;
     justify-content: space-between;
 }
+.header__nav-button {
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    row-gap: 5px;
+    border: 1px solid $color-white;
+    border-radius: 5px;
+    background-color: transparent;
+    @include media-breakpoint-down(md) {
+        display: flex;
+    }
+    & span {
+        width: 20px;
+        height: 2px;
+        display: block;
+        background-color: $color-white;
+    }
+}
+.header__nav-menu {
+    @include media-breakpoint-down(md) {
+        padding-inline: 15px;
+        display: none;
+        position: fixed;
+        width: 100%;
+        min-height: 100%;
+        left: 0;
+        background-color: $bg-color-black;
+        &.show-menu {
+            display: block;
+        }
+        .header__menu-items {
+            flex-direction: column;
+            align-items: flex-start;
+            overflow-y: scroll;
+            .header__menu-item {
+                width: 100%;
+                padding-block: 0;
+                border-block-end: 1px solid $border-color;
+                overflow: hidden;
+                .header__menu-item-link {
+                    width: fit-content;
+                    padding-block: 26px;
+                    border: 0;
+                }
+                .header__submenu-items {
+                    position: static;
+                    display: block;
+                    width: 100%;
+                    max-height: 0;
+                    border: 0;
+                    transition: max-height 0.3s ease-in-out;
+                }
+                &:hover {
+                    & .header__submenu-items {
+                        max-height: 1000px;
+                    }
+                }
+            }
+        }
+    }
+}
 .header__menu-items {
     margin: 0;
     padding: 0;
@@ -28,6 +89,7 @@
 }
 .header__menu-item-link {
     padding: 6px 20px;
+    display: block;
     border-inline-end: 1px solid $border-color;
     font-size: 15px;
     color: $white;
@@ -66,6 +128,9 @@
     color: $text-color-gray;
     text-decoration: none;
     border-block-end: 1px solid $border-color;
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
 }
 .header__menu-item {
     
@@ -73,7 +138,7 @@
 
 .header-top__button {
     margin-block: 10px;
-    padding: 15px 25px;
+    padding: 12px 25px;
     min-width: 155px;
     border: 0;
     background-color: #E8D8B6;
@@ -99,9 +164,33 @@
     border-block-end: 2px solid rgba(50, 50, 50, 0.5);
 }
 .header-bottom__inner {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 'logo menu button';
+    grid-template-columns: 1fr 5fr 1fr;
     align-items: center;
     column-gap: 40px;
+    row-gap: 15px;
+    @include media-breakpoint-down(md) {
+        padding-block-end: 20px;
+        grid-template-areas: 'logo button'
+        'menu menu';
+        grid-template-columns: 1fr 1fr;
+    }
+    @include media-breakpoint-down(xsm) {
+        grid-template-areas: 
+        'logo'
+        'button'
+        'menu';
+        grid-template-columns: 1fr;
+    }
+}
+.header-bottom__site-logo {
+    grid-area: logo;
+    @include media-breakpoint-down(xsm) {
+        padding-block-start: 15px;
+        justify-self: center;
+    }
 }
 .header-bottom__site-logo-link {
     padding-block: 15px;
@@ -110,12 +199,27 @@
 .header-bottom__site-logo-image {
     display: block;
 }
+.header-bottom__menu {
+    grid-area: menu;
+}
 .header-bottom__menu-items {
     padding: 0;
     margin: 0;
     display: flex;
     align-items: center;
     column-gap: 30px;
+    @include media-breakpoint-down(md) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @include media-breakpoint-down(xsm) {
+        row-gap: 20px;
+    }
+}
+.header-bottom__menu-item {
+    @include media-breakpoint-down(xsm) {
+        width: 100%;
+    }
 }
 .header-bottom__menu-item-link {
     display: flex;
@@ -142,12 +246,16 @@
     display: block;
 }
 .header-bottom__button {
-    padding: 15px 20px;
+    grid-area: button;
+    padding: 9px 20px;
     margin-inline-start: auto;
     min-width: 155px;
     border: 0;
     background-color: $bg-color-secondary;
     transition: all 0.3s ease-in-out;
+    @include media-breakpoint-down(xsm) {
+        margin-inline-start: 0;
+    }
     &:hover {
         background-color: #D4C198;
         .header-bottom__button-link {
