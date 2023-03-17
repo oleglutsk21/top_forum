@@ -1,4 +1,5 @@
 @import "custom-variables";
+@import "mixins";
 @import "../bootstrap-5.2.1/scss/bootstrap";
 
 
@@ -10,4 +11,6 @@
 @import "components/customer-reviews";
 @import "components/promo-video";
 @import "components/our-clients";
+@import "components/articles-teaser";
+@import "pages/media-page";
 @import "footer";
