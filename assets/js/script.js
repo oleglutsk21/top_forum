@@ -1,5 +1,7 @@
 
 $(document).ready (function () {
+    $('#sponsors__filter-select').niceSelect();
+    $('#exhibitors__filter-select').niceSelect();
     videoHendler();
 
     /* BANNER IMAGES slider */
