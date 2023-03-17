@@ -40,5 +40,4 @@ window.onload = function() {
             }
         });
     });
-    console.log(subMenuLinks);
 }
