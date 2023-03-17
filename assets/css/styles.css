@@ -8848,6 +8848,248 @@ ul {
   background-color: RGBA(201, 156, 71, 1);
 }
 
+.speakers__inner {
+  padding-block: 50px 70px;
+}
+
+.speakers__page-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #323232;
+  -webkit-margin-after: 22px;
+          margin-block-end: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.speakers__page-description {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 26px;
+  color: #323232;
+  -webkit-margin-after: 40px;
+          margin-block-end: 40px;
+  text-align: center;
+}
+
+.speakers__page-description p:last-child {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.speakers__filter-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-margin-after: 47px;
+          margin-block-end: 47px;
+}
+
+.speakers__filter-label {
+  -webkit-margin-after: 22px;
+          margin-block-end: 22px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #323232;
+  text-transform: uppercase;
+}
+
+.speakers__filter-select {
+  display: none;
+}
+
+.nice-select.speakers__filter-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 12px 20px 18px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #606060;
+  border-color: RGBA(243, 235, 218, 1);
+  border-radius: 1px;
+  height: auto;
+  width: 100%;
+  max-width: 450px;
+  float: none;
+  clear: unset;
+}
+
+.nice-select.speakers__filter-select::after {
+  content: url(./../images/icons/arrow_down.svg);
+  width: auto;
+  height: auto;
+  border: 0;
+  -webkit-transform: translate(0px, 2px);
+      -ms-transform: translate(0px, 2px);
+          transform: translate(0px, 2px);
+  position: static;
+}
+
+.nice-select.speakers__filter-select.open::after {
+  -webkit-transform: translate(-7px, -4px) rotate(180deg);
+      -ms-transform: translate(-7px, -4px) rotate(180deg);
+          transform: translate(-7px, -4px) rotate(180deg);
+}
+
+.nice-select.speakers__filter-select.open .list {
+  border: 1px solid RGBA(243, 235, 218, 1);
+  border-radius: 1px;
+}
+
+.nice-select.speakers__filter-select .current {
+  padding: 0;
+  background-color: transparent;
+}
+
+.nice-select.speakers__filter-select .current::before {
+  content: none;
+}
+
+.nice-select.speakers__filter-select .list {
+  margin: 0;
+  background-color: inherit;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 100%;
+}
+
+.nice-select.speakers__filter-select .list .option {
+  padding: 20px 12px 20px 18px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.speakers__teasers {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 2.6%;
+     -moz-column-gap: 2.6%;
+          column-gap: 2.6%;
+  row-gap: 70px;
+}
+
+.speakers__teasers-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  width: 23%;
+}
+
+.speakers__teaser-category {
+  font-size: 19px;
+  font-weight: 500;
+  -webkit-margin-after: 20px;
+          margin-block-end: 20px;
+  color: #C99C47;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.speakers__teaser-image-wrapper {
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
+  width: 52%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.speakers__teaser-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.speakers__teaser-name {
+  font-size: 17px;
+  font-weight: 500;
+  color: #323232;
+  -webkit-margin-after: 15px;
+          margin-block-end: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.speakers__teaser-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #323232;
+  text-align: center;
+  -webkit-margin-after: 15px;
+          margin-block-end: 15px;
+}
+
+.speakers__teaser-description p:last-child {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.speakers__teaser-link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  padding: 14px 28px;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: RGBA(212, 193, 152, 1);
+  -webkit-margin-before: auto;
+          margin-block-start: auto;
+  margin-inline: auto;
+}
+
+.speakers__teaser-link:hover {
+  color: #FFFFFF;
+  background-color: RGBA(201, 156, 71, 1);
+}
+
 .footer {
   -webkit-margin-before: auto;
           margin-block-start: auto;
@@ -17373,6 +17615,16 @@ ul {
   .exhibitors__teasers-item {
     width: 30%;
   }
+
+  .speakers__teasers {
+    -webkit-column-gap: 5%;
+       -moz-column-gap: 5%;
+            column-gap: 5%;
+  }
+
+  .speakers__teasers-item {
+    width: 30%;
+  }
 }
 
 @media (max-width: 1199.98px) and (prefers-reduced-motion: reduce) {
@@ -17518,6 +17770,16 @@ ul {
   }
 
   .exhibitors__teasers-item {
+    width: 45%;
+  }
+
+  .speakers__teasers {
+    -webkit-column-gap: 10%;
+       -moz-column-gap: 10%;
+            column-gap: 10%;
+  }
+
+  .speakers__teasers-item {
     width: 45%;
   }
 }
@@ -18005,6 +18267,10 @@ ul {
   }
 
   .exhibitors__teasers-item {
+    width: 100%;
+  }
+
+  .speakers__teasers-item {
     width: 100%;
   }
 }
