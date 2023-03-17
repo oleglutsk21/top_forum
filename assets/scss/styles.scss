@@ -1,7 +1,7 @@
 @import "custom-variables";
 @import "mixins";
 @import "../bootstrap-5.2.1/scss/bootstrap";
-
+@import "../libraries/jquery-nice-select/scss/nice-select.scss";
 
 
 @import "global";
@@ -13,4 +13,5 @@
 @import "components/our-clients";
 @import "components/articles-teaser";
 @import "pages/media-page";
+@import "pages/our-sponsors";
 @import "footer";
