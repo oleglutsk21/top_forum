@@ -9104,7 +9104,18 @@ ul {
   row-gap: 40px;
 }
 
+.contacts__map {
+  width: 66%;
+  aspect-ratio: 75/44;
+}
+
+.contacts__map iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .contacts__info {
+  width: 31%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9112,7 +9123,142 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   row-gap: 30px;
+}
+
+.contacts__info-item {
+  font-size: 15px;
+  font-weight: 500;
+  color: #323232;
+}
+
+.contacts__info-item a[href*="mailto:"] {
+  font-weight: 300;
+  color: #c99c47;
+}
+
+.contacts__info-item a[href*="tel:"] {
+  font-weight: 400;
+  text-decoration: none;
+  color: #323232;
+}
+
+.feedback {
+  padding-block: 45px;
+  background-color: RGBA(232, 216, 182, 0.3);
+}
+
+.feedback__section-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #323232;
+  -webkit-margin-after: 16px;
+          margin-block-end: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 40px;
+}
+
+.feedback__form {
+  width: 65%;
+  text-align: end;
+}
+
+.feedback__form-item-title {
+  -webkit-margin-after: 9px;
+          margin-block-end: 9px;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: start;
+  color: #606060;
+}
+
+#message {
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
+  padding: 15px;
+  width: 100%;
+  min-height: 115px;
+  resize: none;
+  border: 1px solid RGBA(232, 216, 182, 1);
+  outline: none;
+}
+
+.feedback__user-info-title {
+  -webkit-margin-after: 8px;
+          margin-block-end: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: start;
+  color: #606060;
+}
+
+.feedback__form-user-info {
+  -webkit-margin-after: 16px;
+          margin-block-end: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  row-gap: 20px;
+}
+
+.feedback__form-item {
+  padding: 20px 15px;
+  width: 50%;
+  font-size: 12px;
+  font-weight: 300;
+  color: #606060;
+  border: 1px solid RGBA(232, 216, 182, 1);
+  outline: none;
+}
+
+#feedback__form-submit {
+  padding: 17px 40px;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: 0;
+  background-color: #c99c47;
+}
+
+.feedback__info {
+  -webkit-padding-before: 30px;
+          padding-block-start: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #323232;
+}
+
+.feedback__info p {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.feedback__info a {
+  color: #c99c47;
+}
+
+.feedback__info a[href*="tel:"] {
+  font-size: 24px;
+  text-decoration: none;
+  color: #323232;
 }
 
 .footer {
@@ -18002,6 +18148,37 @@ ul {
         flex-wrap: wrap;
   }
 
+  .contacts__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .contacts__map {
+    width: 100%;
+  }
+
+  .contacts__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .feedback__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .feedback__form {
+    width: 100%;
+  }
+
   .footer__menu {
     min-height: 160px;
   }
@@ -18024,6 +18201,7 @@ ul {
   .footer__copyright-text {
     -webkit-padding-end: 0;
             padding-inline-end: 0;
+    text-align: center;
   }
 }
 
@@ -18296,6 +18474,15 @@ ul {
   }
 
   .speakers__teasers-item {
+    width: 100%;
+  }
+
+  .feedback__form-user-info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .feedback__form-item {
     width: 100%;
   }
 }

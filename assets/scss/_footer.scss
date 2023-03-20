@@ -109,6 +109,7 @@
     padding-inline-end: 15px;
     @include media-breakpoint-down(md) {
         padding-inline-end: 0;
+        text-align: center;
     }
 }
 .footer__copyright-logo {
